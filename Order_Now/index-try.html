@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TRYOrderNow</title>
+	<meta charset="utf-8">
+	<meta name="viewport"  content="width=device-width ,initial-scale=1" />
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+  
+</head>
+
+<body>
+	<!-- NAVBAR FOR REFERANCE -->
+	<div class="navbar sticky-top navbar-expand-sm .navbar-dark bg-light">
+	<a class="navbar-brand" href="#">Navbar</a>
+
+	  <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
+		    <!-- <ul class="navbar-nav mr-auto">
+		 	  <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Dropdown
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="#">Action</a>
+			          <a class="dropdown-item" href="#">Another action</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" href="#">Something else here</a>
+			        </div>
+		      </li>
+		    </ul> -->
+		    <ul class="nav navbar-nav navbar-right ">
+
+		    <li class="dropdown" >
+				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				   <span class="button-text">Please Select Your Profession</span>
+				  </button>
+				  <div class="dropdown-menu" id="drop" aria-labelledby="dropdownMenuButton">
+				    <a class="dropdown-item" data-toggle="collapse" data-parent="#accordion" onclick="init()" href="#collapse1" data-parent="#drop">   Teacher/professor</a>
+		            <a class="dropdown-item" data-toggle="collapse" data-parent="#accordion" onclick="init()" href="#collapse2" data-parent="#drop">  Business Professional</a>
+				  </div>
+			</li>
+			<li>
+			 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">HOME</button>
+			</li>
+			    <!-- <form class="form-inline my-2 my-lg-0" >
+			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="float:right;">HOME</button>
+			    </form> -->
+			</ul>
+	  </div>
+</div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- FOR TOTAL -->
+<!-- <h3>Total:</h3>
+<h6 id="ItemsTotal"></h6> -->
+
+<!-- For Collapsible -->
+		<div class="panel-group" id="accordion">
+		    <div class="panel panel-default">
+		        <!-- <div class="panel-heading">
+		            <h4 class="panel-title">
+		            	<h5>Please select your profession</h5>
+		                <a class="btn btn-outline-secondary" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+		                    Teacher/professor
+		                </a>
+		                <a class="btn btn-outline-secondary" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+		                    BUISNESS
+		                </a>
+		            </h4>
+		        </div> -->
+
+		        <!-- For teachers -->
+		        <div id="collapse1" class="panel-collapse collapse in">
+		            <div class="panel-body">
+		                <div class="container-fluid">
+						<h2 style="padding-bottom: 50px;padding-top: 50px;">What Type Of Treatment Do You Want From Us</h2>
+
+						<div class="row">
+						  <div id="content" class="col-sm-3 no-hov" onclick="calculate_t(this , 50)">
+						    <div class="card" >
+						      <img src="images/card1.jpg" class="card-img-top">
+						      <div class="card-body">
+						        <h4>CONTENT WRITING</h4>
+	    						<p>Submit your document,we can type it in ppt.</p>
+	    						<h1>₹50</h1>
+						    	<h6>per slide</h6>
+						        <a href="#" class="btn btn-primary">Example</a>
+						      </div>
+						    </div>
+						  </div>
+
+						  <div id="animation" class="col-sm-3 no-hov" style="margin-top: 50px;" onclick="calculate_t(this,75)">
+						    <div class="card">
+						    	 <img src="images/card2.jpg" class="card-img-top">
+						      	<div class="card-body">
+							        <h4>ADD ANIMATIONS</h4>
+		    						<p>We will add flavour to your ppt by adding animations</p>
+		    						<h1>₹75</h1>
+							    	<h6>per slide</h6>
+							        <a href="#" class="btn btn-primary">Example</a>
+						      	</div>
+						    </div>
+						  </div>
+
+						  <div id="graphics" class="col-sm-3 no-hov" style="margin-top: 100px;" onclick="calculate_t(this ,100)">
+						    <div class="card">
+						    	<img src="images/card3.jpg" class="card-img-top">
+						      <div class="card-body">
+						        <h4>ADD GRAPHICS</h4>
+	    						<p>Turn your sketch or image into an editable slide</p>
+	    						<h1>₹100</h1>
+						    	<h6>per slide</h6>
+						        <a href="#" class="btn btn-primary">Example</a>
+						      </div>
+						    </div>
+						  </div>
+
+						<div class="col-sm-3" style="margin-top: 150px;">
+						    <div class="card">
+						      <img src="images/card4.jpg" id=myImg1 class="card-img-top">
+						      <div class="card-body">
+						        <h4>OTHER</h4>
+						    	<p>Pricing will differ according to your requirments</p>
+	    						<!-- <h1>$34</h1> -->
+	    						<h6>Get in touch</h6>
+						        <a href="#" class="btn btn-primary" style="margin: 30px 0px 25px 0px;">Get in touch with us</a>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						</div>
+		            </div>
+		        </div>
+
+		        <!-- For professionals -->
+		        <div id="collapse2" class="panel-collapse collapse in">
+		            <div class="panel-body">
+		                <div class="container-fluid">
+						<h2 style="padding-bottom: 50px;padding-top: 50px;">What Type Of Treatment Do You Want</h2>
+
+						<div class="row">
+						  <div id="content1" class="col-sm-3 no-hov" onclick="calculate_b(this , 150)">
+						    <div class="card" >
+						      <img src="images/card1.jpg" class="card-img-top">
+						      <div class="card-body">
+						        <h4>CONTENT WRITING</h4>
+    							<p>Making a flow to sell your products best</p>
+    							<h1>₹150</h1>
+						    	<h6>per slide</h6>
+						        <a href="#" class="btn btn-primary">Example</a>
+						      </div>
+						    </div>
+						  </div>
+
+						  <div id="animation1" class="col-sm-3 no-hov" style="margin-top: 50px;" onclick="calculate_b(this , 100)">
+						    <div class="card">
+						    	 <img src="images/card2.jpg" class="card-img-top">
+						      	<div class="card-body">
+							        <h4>ADD ANIMATIONS</h4>
+	    							<p>Turn your sketch or image into an editable slide</p>
+	    							<h1>₹100</h1>
+							    	<h6>per slide</h6>
+							        <a href="#" class="btn btn-primary">Example</a>
+						      	</div>
+						    </div>
+						  </div>
+
+						  <div id="graphics1" class="col-sm-3 no-hov" style="margin-top: 100px;"onclick="calculate_b(this ,100)">
+						    <div class="card">
+						    <img src="images/card3.jpg" class="card-img-top">
+						      <div class="card-body">
+						        <h4>ADD GRAPHICS</h4>
+    							<p>Turn your sketch or image into an editable slide</p>
+    							<h1>₹100</h1>
+						    	<h6>per slide</h6>
+						        <a href="#" class="btn btn-primary">Example</a>
+						      </div>
+						    </div>
+						  </div>
+
+						<div class="col-sm-3" style="margin-top: 150px;">
+						    <div class="card">
+						    	<img src="images/card4.jpg" id=myImg2 class="card-img-top">
+						      <div class="card-body">
+						        <h4>OTHER</h4>
+						    	<p>Pricing will differ according to your requirments</p>
+    							<!-- <h1>$34</h1> -->
+    							<!-- <h6>Get in touch</h6> -->
+						        <a href="#" class="btn btn-primary" style="margin: 30px 0px 25px 0px;">Get in touch with us</a>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						</div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+			<!-- The Modal -->
+		<div id="myModal" class="modal">
+		  <span class="close">&times;</span>
+		  <div class="modal-content">
+		  	<form>
+		  		  <!-- <img class="modal-content" id="img01"> -->
+		  		  <h3 style="text-align: center; padding: 0px 0px 40px 0px;">Please Fill Your Requirements</h3>
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">Email address</label>
+				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">Password</label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				  </div>
+				  <div class="form-check">
+				    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+				  </div>
+				  <button style="text-align: center;"type="submit" class="btn btn-primary">Submit</button>
+				</form>
+		  </div>
+		 
+		  <div id="caption"></div>
+		</div>
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- FOR DROPING FILE -->
+		  <div class="text-block">
+		    <form>
+			  <div class="form-group">
+			  	<h2 style="margin-top: 20px;">Share your file with us</h2>
+			  	<label class="custom-upload" class="file-upload-wrapper">
+			  		<h2><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></h2>
+			  		Drop Your file
+			  		<input type="file" id="upload" class="form-control" >
+			  	</label>
+			  </div>
+			</form>
+			<form method="post" action="#" id="#">
+              <div class="form-group files color">
+                <label>DROP HERE</label>
+                <input type="file" class="form-control" multiple="">
+              </div>
+          </form>
+		  </div>
+
+		<!-- FOR INPUT SPINNER(NUMBER OF SLIDES) -->
+		<div class="spinner">
+			<div class="container-fluid">
+				<div class="row">
+						<div class="text-center">
+							<h3>Please select number of slides</h3>
+							<div class="input-group number-spinner">
+							<!-- <span class="input-group-btn">
+								<button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+							</span> -->
+							<span class="input-group-btn">
+								<button class="btn btn-primary" data-dir="dwn"><span><i class="fa fa-minus" aria-hidden="true"></i></span></button>
+							</span>
+							<input type="text" class="form-control text-center" id="slides" value="1" readonly>
+							<!-- <span class="input-group-btn">
+								<button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+							</span> -->
+							<span class="input-group-btn">
+								<button class="btn btn-primary" data-dir="up"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- FOR TOGGLABLE SIDEPANEL -->
+	<div id="mySidepanel" class="sidepanel">
+	  <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+	  <div class="bo">
+	  	<div class="left-align">Slides</div>
+	  	<div class="right-align" id="no"></div>
+	  	<div class="clear"></div>
+	  </div>
+
+	  <!-- <hr class="line"> -->
+
+	  <div class="bo">Deadline</div>
+
+	  <!-- <hr class="line"> -->
+
+	  <!-- <p>Clients</p>
+
+	  <hr class="line">
+
+	  <p>Contact</p>
+	 -->
+	  <div class="total">
+	  	<div class="left-align">Subtotal</div>
+	  	<div class="right-align" id="ItemsTotal"></div>
+	  	<div class="clear"></div>
+	  </div>
+	  <div class="checkout">Check Out</div>
+	</div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!--For recovering no of clicks   -->
+<p id="carrier">0</p>
+	<!-- For deadline -->
+	<div class="time">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4" style="background-color: #4D5656">
+					<h4>When do you need it?</h4>
+				</div>
+				<div class="w-auto col-sm-8 col-md-8 col-lg-8" style="background-color: black">
+								<!--Carousel Wrapper-->
+							<div id="multi-item-example" class="carousel carousel-multi-item" data-ride="carousel">
+
+								  <!--Controls-->
+								  <div class="controls-top">
+								    <a class="btn-floating" onclick="displaycount()" id="prev" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+								    <a class="btn-floating" onclick="displaycount()" id="next" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+								  </div>
+								  <!--/.Controls-->
+
+								  <!--Indicators-->
+								  <!-- <ol class="carousel-indicators">
+								    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+								    <li data-target="#multi-item-example" data-slide-to="1"></li>
+								  </ol> -->
+								  <!--/.Indicators-->
+
+								 <!--Slides-->
+								<div class="carousel-inner" role="listbox">
+
+									    <!--First slide-->
+									    <div class="carousel-item active">
+									      <div class="col-md-6 col-sm-6 col-lg-4">
+									       <div class="card">   
+									          <div class="card-body">
+									            <h1></h1>
+									            <p></p>
+									          </div>
+									        </div>
+									      </div>
+									    </div>
+									    <!--/.First slide-->
+
+										<!--second slide-->
+									    <div class="carousel-item">
+									      <div class="col-md-6 col-sm-6 col-lg-4">
+									       <div class="card"> 
+									          <div class="card-body">
+									            <h4 class="card-title">Card title</h4>
+									            <h1 class="post"></h1>
+									            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+									              card's content.</p>
+									            <a class="btn btn-primary">Button2</a>
+									          </div>
+									        </div>
+									      </div>
+									    </div>
+									    <!--/.second slide-->
+
+
+								    	<!--third slide-->
+									    <div class="carousel-item">
+									      <div class="col-md-6 col-sm-6 col-lg-4">
+									        <div class="card">
+									          <div class="card-body">
+									            <h4 class="card-title">Card title</h4>
+									            <h1 class="post"></h1>
+									            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+									              card's content.</p>
+									            <a class="btn btn-primary">Button3</a>
+									          </div>
+									        </div>
+									      </div>
+										</div>
+										<!--/.third slide-->
+
+
+										<!--fourth slide-->
+									    <div class="carousel-item">
+									      <div class="col-md-6 col-sm-6 col-lg-4">
+									        <div class="card">
+									          <div class="card-body">
+									            <h4 class="card-title">Card title</h4>
+									            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+									              card's content.</p>
+									            <a class="btn btn-primary">Button4</a>
+									          </div>
+									        </div>
+									      </div>
+										</div>
+										<!--/.fourth slide-->
+
+										<!--five slide-->
+									   <div class="carousel-item">
+									      <div class="col-md-6 col-sm-6 col-lg-4">
+									        <div class="card">
+									          <div class="card-body">
+									            <h4 class="card-title">Card title</h4>
+									            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+									              card's content.</p>
+									            <a class="btn btn-primary">Button5</a>
+									          </div>
+									        </div>
+									      </div>
+										</div>
+										<!--/.five slide-->
+
+										<!--six slide-->
+									   <div class="carousel-item">
+									      <div class="col-md-6 col-sm-6 col-lg-4">
+									        <div class="card">
+									          <div class="card-body">
+									            <h4 class="card-title">Card title</h4>
+									            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+									              card's content.</p>
+									            <a class="btn btn-primary">Button6</a>
+									          </div>
+									        </div>
+									      </div>
+										</div>
+										<!--/.six slide-->
+
+										<!--seven slide-->
+									   <div class="carousel-item">
+									      <div class="col-md-6 col-sm-6 col-lg-4">
+									        <div class="card">
+									          <div class="card-body">
+									            <h4 class="card-title">Card title</h4>
+									            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+									              card's content.</p>
+									            <a class="btn btn-primary">Button7</a>
+									          </div>
+									        </div>
+									      </div>
+										</div>
+										<!--/.seven slide-->
+
+										<!--eight slide-->
+									   <div class="carousel-item">
+									      <div class="col-md-6 col-sm-6 col-lg-4">
+									        <div class="card">
+									          <div class="card-body">
+									            <h4 class="card-title">Card title</h4>
+									            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+									              card's content.</p>
+									            <a class="btn btn-primary">Button8</a>
+									          </div>
+									        </div>
+									      </div>
+										</div>
+										<!--/.eight slide-->
+
+
+										<!--nine slide-->
+									   <div class="carousel-item">
+									      <div class="col-md-6 col-sm-6 col-lg-4">
+									        <div class="card">
+									          <div class="card-body">
+									            <h4 class="card-title">Card title</h4>
+									            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+									              card's content.</p>
+									            <a class="btn btn-primary">Button9</a>
+									          </div>
+									        </div>
+									      </div>
+										</div>
+										<!--/.nine slide-->
+
+										<!--ten slide-->
+									   <div class="carousel-item">
+									      <div class="col-md-6 col-sm-6 col-lg-4">
+									        <div class="card">
+									          <div class="card-body">
+									            <h4 class="card-title">Card title</h4>
+									            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+									              card's content.</p>
+									            <a class="btn btn-primary">Button10</a>
+									          </div>
+									        </div>
+									      </div>
+										</div>
+										<!--/.ten slide-->
+
+								</div>
+								<!--/.Slides-->
+
+							</div>
+							<!--/.Carousel Wrapper-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+        <div class="slide2 defaulttheme">
+        	<div class="slide2-wrapper content-container">
+            	<div class="title">Focus on your products. Outsource Everything Else.</div>
+                <div class="sub-title">Setting up, operating and managing your own eCommerce operations is not where the race is won. Avoid the risk and complexity, and dedicate your energy to what really matters: Developing great products.</div>
+				<div class="slide2-content">
+                	<div class="scrubber-stage">
+                      <div class="scrubber-left">
+                        <img src="https://eshopbox.com/wp-content/themes/twentyseventeen/images/homepage-slide2-left.png">
+                      </div>
+                      <div class="scrubber-middle">
+                        <div id="scrubber-handle"></div>
+                        <div class="scrubber-before">
+                        	<h4>Without eShopbox</h4>
+                          <div></div>
+                        </div>
+                        <div class="scrubber-after">
+                        	<h4>With eShopbox</h4>	
+                          <div></div>
+                        </div>
+                      </div>
+                      <div class="scrubber-right">
+                        <img src="https://eshopbox.com/wp-content/themes/twentyseventeen/images/homepage-slide2-right.png">
+                      </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="explorebtn"><a href="/channel-management/" class="btn">Explore Features<i>→</i></a></div>
+        </div>
+        
+        
+        
+        <div class="slide2 mobiletheme">
+        	<div class="slide2-wrapper content-container">
+            	<div class="title">Focus on your products. Outsource Everything Else.</div>
+                <div class="sub-title">Setting up, operating and managing your own eCommerce business is not where the race is won. Avoid the risk
+and complexity, and dedicate your energy to what really matters : Developing Great Products.</div>
+				<div class="slide2-content">
+                	<div class="scrubber-stage">
+                      <div class="scrubber-left">
+                        <img src="https://eshopbox.com/wp-content/themes/twentyseventeen/images/homepage-slide2-left.png">
+                      </div>
+                      <div class="scrubber-middle scrubber-slider">
+                        <ul>
+                        	<li><img src="https://eshopbox.com/wp-content/themes/twentyseventeen/images/homepage-slide2-back.png"></li>
+                            <li><img src="https://eshopbox.com/wp-content/themes/twentyseventeen/images/homepage-slide2-front.png"></li>
+                        </ul>	
+                      </div>
+                      <div class="scrubber-right">
+                        <img src="https://eshopbox.com/wp-content/themes/twentyseventeen/images/homepage-slide2-right.png">
+                      </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="explorebtn"><a href="/channel-management/" class="btn">Explore Features<i>→</i></a></div>
+        </div>
+
+
+	<!-- For deadline -->
+	<div class="time">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-5" style="background-color: #4D5656">
+					<h4 style="font-size:5vw;">When do you need it?</h4>
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-7" style="background-color:#100e17">
+						<div class="row align-items-center justify-content-between">
+							<div class="span today">
+								<div class="card" style="width: 15rem;">
+									<div class="card-header">
+										<h5 style="margin-top: .5rem;">TODAY</h5>
+									</div>
+									<div class="card-body">
+									    <h2 class="card-title"></h2>
+									    <p style="font-size: 23px;"></p>
+								  </div>
+								</div>
+							</div>
+
+							<div class="span">
+								<div class="card" style="width: 15rem;">
+									<div class="card-body">
+										<h5 class="card-title">In</h5>
+										<!--Controls-->
+										  <div class="controls-top">
+										    <a class="btn-floating" onclick="displaycount()" id="prev" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+										    <!-- <input type="text" id="in" readonly> -->
+										    <span id="in"></span>
+										    <a class="btn-floating" onclick="displaycount()" id="next" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+										  </div>
+										 <!--/.Controls-->
+									    <h5>Buisness Days</h5>
+								  </div>
+								</div>
+							</div>
+
+							
+						</div>
+						<div class="row align-items-end" style="background-color: #312d3c">
+								<span id="dead"></span>
+								<!-- <span>Your ppt will be delivered on</span><p>23th feb 2020</p> -->
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- <button class="openbtn" onclick="openNav()">☰ Toggle Sidepanel</button>   -->
+	<!-- <button class="openbtn" id="click-btn"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button> -->
+	<button class="openbtn" id="click-btn"><span><svg class="bi bi-cart2" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/></svg></i></span></button>
+	<!-- JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="js/order.js"></script>
+
+  	<!-- FOR INPUT SPINNER -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>

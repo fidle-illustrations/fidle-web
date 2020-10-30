@@ -1,0 +1,6 @@
+Things needed for home page-
+	1.Short 3-4 lines content for the three cards(webinar , teacher , etc)
+	2.Content for the top part of the page.(3-4 lines)
+	3.Content for the hover images part.
+	4.Temparary redirection pages for order now and chat buttons.
+	5.Working links of facebook instagrm ,linkedin and any other social media sites we are active on.

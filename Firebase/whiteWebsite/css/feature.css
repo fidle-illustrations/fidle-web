@@ -1,0 +1,123 @@
+/*
+  terrible.css
+  Andrew Tunecliffe, 2015
+  http://atunnecliffe.com
+*/
+/* uncomment to see outlines of stuff when you hover *-/
+:hover {
+  background:rgba(0, 0, 0, 0.1);
+}/**/
+
+.text-responsive {
+  font-size: calc(100% + 1vw + 1vh);
+}
+
+
+.anurag .col1 .icon {
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    line-height: 85px;
+    text-align: center;
+    margin: 0 auto;
+    transition: background 0.25s linear, color 0.25s linear;
+}
+
+.anurag .col1 .icon.side {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: -15px;
+    height: 50px;
+    width: 50px;
+}
+
+.col1:hover > .icon {
+    background: #F44336;
+    color: white;
+}
+
+/*
+  Column specifics
+*/
+
+
+
+
+/*
+Extra small devices (portrait phones, less than 544px)
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 300px) {
+    h1 {font-size:50px;} /*1rem = 16px*/
+    p {font-size:16px;}
+    .heading {font-size:70px;}
+
+}
+@media (max-width: 600px) { /*Phone*/
+    .image-container{
+        height: 250px;
+        width: 400px;
+        position: relative;
+        border: 0px solid black;
+    }
+}
+
+@media (min-width: 600px) { /*iPad*/
+    .image-container{
+        height: 380px;
+        width: 650px;
+        position: relative;
+        border: 0px solid black;
+    }
+}
+
+@media (min-width: 850px) { /*Laptop*/
+    .image-container{
+        height: 500px;
+        width: 1080px;
+        position: relative;
+        border: 0px solid black;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+    h1 {font-size:2.5rem;} /*1rem = 16px*/
+    p {font-size:1.1rem;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    h1 {font-size:2.5rem;} /*1rem = 16px*/
+    p {font-size:1.1rem;}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    h1 {font-size:2.5rem;} /*1rem = 16px*/
+    p {font-size:1.1rem;}
+}
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (min-width: 950px) and (max-width:1100px) {
+    h1 {font-size:2.75rem;color:red;}
+}
+
+

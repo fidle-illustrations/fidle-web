@@ -1,0 +1,1 @@
+to make navbar noncollapsable just remove the class collapse

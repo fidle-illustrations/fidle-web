@@ -1,0 +1,336 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns:font-size="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>WHITE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="{% static 'icon.ico' %}" rel="icon" type="image/png" style="width: 30px">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'home1.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'contact.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'feature.css' %}">
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 978px) {
+            .container-fluid {
+                padding: 0;
+                /* margin: 5px; */
+            }
+        }
+    </style>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            let banner = document.getElementById('box');
+            let devLayer = banner.querySelector('.secondimg');
+            let delta = 0;
+
+            banner.addEventListener('mousemove', function(e){
+                delta = (e.clientX - window.innerWidth / 2) * 0.5;
+                devLayer.style.width = e.clientX + 1000 + delta + 'px';
+            });
+        })
+    </script>
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+    <div class="container-fluid pb-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="">
+                <img src="{% static 'butterfly1.png' %}" alt="WHITE" height="100"
+                     width="150" align="left">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link ml-3" style="color: #000000" href="#WhyUs">Why Us?</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link ml-3" style="color: #000000" href="#Contact">Contact Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+    <br>
+
+    <div id="navbar1"></div>
+    <div class="container-fluid pt-5 pb-3 my-4">
+        <div class="row" id="">
+            <!-- Showcase -->
+            <div class="col-lg-1 d-none d-lg-block"> </div>
+            <div class="col-lg-7 col-xs-12 row">
+                <section class="" id="-a">
+                    <div class="">
+
+                        <h1 class="col-lg-8 heading">Enhancing your presenting experience</h1><br>
+                        <p class="col-lg-6">
+                            We believe an idea delivered impactfully can change the world. We are committed to make that
+                            happen
+                            for
+                            every individual we come across. We do this by expressing ideas into stories which will
+                            leave
+                            your
+                            audience awestruck.
+                        </p>
+
+                        <a href="#Contact" class="btn  ml-3">Getting Started</a>
+                    </div>
+                </section>
+            </div>
+
+
+            <div class=" col-lg-4">
+                <section class="section-a" id="section-a">
+                    <div class="container1">
+
+                        <div style="text-align: right" class="image1 d-none d-lg-block float-right ml-auto"><img
+                                src="{% static 'ppt2.png' %}" alt="ppt" width="350"/></div>
+
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Features -->
+    <div style="text-align: center; font-size: xx-large" >
+        <b>WHITE </b>
+        <p class="pb-4" style="color: #999999">Apart from providing amazing presentations, our team will handle your orders with the top-most care and provide the best customer care.</p>
+    </div>
+
+    <div class="anurag container-fluid">
+        <div class="container2 row mx-auto" style="text-align: center">
+            <div class="col-xl-1 d-none d-lg-block"> </div>
+            <div class="col1 col-xl-3 col-md-6 mx-auto pt-2" style="text-align: center">
+                <h1 class="icon"><img src="{% static 'Accessible.png' %}" style="width:65%;height:65%;"></h1>
+                <h1 style="text-align: center">Accessible</h1>
+                <p style="color: #000000">Bridge the gap between you and your audience</p>
+            </div>
+            <div class="col1 col-xl-2 col-md-6 mx-auto pt-2">
+                <h1 class="icon" style="align-content: center"><img src="{% static 'watching_tv.png' %}" style="width:60%;height:60%;"></h1>
+                <h1>Engaging</h1>
+                <p style="color: #000000">Engage your audience</p>
+            </div>
+            <div class="col1 col-xl-3 col-md-6 mx-auto pt-2">
+                <h1 class="icon"><img src="{% static 'infographic.png' %}" style="width:65%;height:60%;"></h1>
+                <h1>Infographics</h1>
+                <p style="color: #000000">We create beautiful presentations rich with infographics</p>
+            </div>
+            <div class="responsivegroup"></div>
+
+            <div class="col1 col-xl-3 col-md-6 mx-auto pt-2">
+                <h1 class="icon"><img src="{% static 'data_security.png' %}" style="width:65%;height:60%;"></h1>
+                <h1>Data Security</h1>
+                <p style="color: #000000">Complete data security ensured</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WITH WITHOUT WHITE -->
+    <div class="presentation mt-5 pt-5" id="WhyUs">
+        <div id="container12" class="presentation2">
+            <div class="one" id="box">
+                <div class="row w-100">
+                    <div class="col-2" style="padding-top: 13%;">
+                    <img src="{% static 'teach.png' %}" class="img-fluid">
+                        </div>
+                    <div class="col-8 d-none d-xl-block mid1">
+                        <div class="imagesection" id="imagesection">
+                      <div class="imagea firstimg">
+                        <div class="final-image">
+                          <img src="{% static 'with1.png' %}" >
+                        </div>
+                      </div>
+                      <div class="imagea secondimg">
+                        <div class="final-image">
+                          <img src="{% static 'without1.png' %}" >
+                        </div>
+                      </div>
+                        </div>
+                    </div>
+                    <div class="col-8 d-block d-xl-none mid2">
+                          <div id="demo" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="hover">
+
+                            <!-- Indicators  -->
+                            <ul class="carousel-indicators">
+                              <li data-target="#demo" data-slide-to="0" class="active"></li>
+                              <li data-target="#demo" data-slide-to="1"></li>
+                            </ul>
+                          
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="{% static 'without1.png' %}" alt="without white" style="width:100%;">
+                              </div>
+            
+                              <div class="carousel-item">
+                                <img src="{% static 'with1.png' %}" alt="with white" style="width:100%;">
+                              </div>
+                            </div>
+                          
+                            <!-- Left and right controls -->
+                            <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                              <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                              <span class="carousel-control-next-icon"></span>
+                            </a> -->
+                          
+                          </div>
+                    </div>
+                    <div class="col-2" style="padding-top: 13%;">
+                        <img src="{% static 'present.png' %}" class="img-fluid" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Contact form-->
+    <div class="container my-5 pt-3">
+        <div class="contact-c pb-4 my-5" id="Contact">
+            <!--<h1 class="title">Contact Us</h1>-->
+            <h2 class="title"><b>We'd love to hear from you!</b></h2>
+            <div class="wrapper animated bounceInLeft">
+                <div class="contact">
+                    <h3 class="contact-us" style="text-align: center"><b>Contact Us</b></h3>
+                    <div class="alert">Your message has been sent!</div>
+                    <form id="contactForm" method="post" action="/form">
+                        {% csrf_token %}
+                        <p class="name-field">
+                            <label>Name <span>*</span></label>
+                            <input type="text" name="name" id="name" required>
+                        </p>
+                        <p class="company-field">
+                            <label>Company</label>
+                            <input type="text" name="company" id="company">
+                        </p>
+                        <p class="email-field">
+                            <label>Email <span>*</span></label>
+                            <input id="email" name="email" required type="email">
+                        </p>
+                        <p class="phone-field">
+                            <label>Phone</label>
+                            <input type="text" name="phone" id="phone">
+                        </p>
+                        <p class="message-field full">
+                            <label>Message <span>*</span></label>
+                            <textarea name="message" rows="5" id="message" required></textarea>
+                        </p>
+                        <p class="required-field">Required field <span>*</span></p>
+                        <p class="submit-button">
+                            <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="section-footer" style="background-color: #000000">
+        <div class="container1 mx-auto">
+
+            <div class="mx-auto">
+                <h2 class="text-2 mb-1" style="color: white">WHITE</h2>
+                <p style="font-size: 14px; color: gray"><i>"Enhancing your presenting experience"</i></p>
+            </div>
+
+            <div class="mx-auto">
+                <h3 style="color: white">Quick Links</h3>
+                <ul>
+                    <li><a href="#navbar1">Go to Top</a></li>
+                    <li><a href="#WhyUs">Features</a></li>
+                </ul>
+            </div>
+
+            <div class="mx-auto" style="color: white">
+                Get a quote. Call us. <br> &#9990; <a href="tel:+91 7020990332">+91-7020990332</a><br>
+                &#9990; <a href="tel:+91 8805750684">+91-8805750684</a>
+            </div>
+
+            <div id="email-id" style="color: white">
+                Don't like forms? <a href="mailto:operations@white.org.in"><br>
+                <p style="font-size: 16px; color: gray"> Email us here <img src="{% static 'icons/email-icon.png' %}"
+                                                                            width="30"></a> <br>
+                <a href="https://api.whatsapp.com/send?phone=+91-7020990332"> Or WhatsApp us <img
+                        src="{% static 'icons/WhatsApp-icons.png' %}" width="30"></a></p>
+            </div>
+
+        </div>
+    </footer> -->
+    <footer class="footer" style="background-color: #000000">
+
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2 class="text-2 mb-1" style="color: white">WHITE</h2>
+                <p style="font-size: 14px; color: gray"><i>"Enhancing your presenting experience"</i></p>
+            </div>
+
+            <div class="footer-section links">
+                <h3 style="color: white">Quick Links</h3>
+                <ul>
+                    <li><a href="#navbar1">Go to Top</a></li>
+                    <li><a href="#WhyUs">Features</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact" style="color: white">
+                Get a quote. Call us. <br> &#9990; <a href="tel:+91 7020990332">+91-7020990332</a><br>
+                &#9990; <a href="tel:+91 8805750684">+91-8805750684</a>
+            </div>
+
+            <div class="footer-section mail" id="email-id" style="color: white">
+                Don't like forms? <a href="mailto:operations@white.org.in" style="color: white;">
+                <p style="font-size: 16px; color: gray"> Email us here <img src="{% static 'icons/email-icon.png' %}"
+                                                                            width="30"></a> <br>
+                <a href="https://api.whatsapp.com/send?phone=+91-7020990332"> Or WhatsApp us <img
+                        src="{% static 'icons/WhatsApp-icons.png' %}" width="30"></a></p>
+            </div>
+
+        </div>
+    </footer>
+</div>
+</body>
+</html>

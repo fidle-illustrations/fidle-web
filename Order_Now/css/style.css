@@ -1,0 +1,565 @@
+body, html {
+  /*height:100%;*/
+  margin: 0;
+  font-family:sans-serif;
+}
+
+.bg {
+  background-image: url("../images/pp.jpg");
+  height: 50%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row .col-sm{
+	float: left;
+  	padding: 10px;
+	margin: 0px 10px 0px 10px;
+
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+  	width: 40%;
+    position: relative;
+}
+
+
+/* To highlight card on click */
+.high{
+  /* background: red; */
+  border: 2px solid #2ECC71;
+}
+
+/*For card images*/
+.row .col-sm img{
+	height: 50%;
+}
+
+.row .col-sm .content{
+	float: left;
+  	padding: 10px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+    position: relative;
+    background: rgb(0, 0, 0); /* Fallback color */
+  	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  	bottom: 0;
+  	background-color: #7B7D7D ;
+  	color: #f1f1f1;
+  	width: 100%;
+  	padding: 20px;
+  	margin-right: 10px;
+}
+
+.content h1{
+	color: #F39C12;
+}
+
+.row .col-sm:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+
+.content h4 {
+	text-align: center;
+}
+
+#myImg1:hover {opacity: 0.7;}
+
+#myImg2:hover {opacity: 0.7;}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (form) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 60px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/*Form in model content*/
+.modal-content form{
+	margin: 50px;
+	z-index: 999;
+}
+
+.text-block {
+  		/*position: absolute;*/
+      left: 0;
+      right: 0;
+        /*top: 145%;  Adjust this value to move the positioned div up and down */
+      text-align: center;
+        /*width: 22%;  Set the width of the positioned div */
+
+      padding: 40px;
+      background: rgb(0, 0, 0); /* Fallback color */
+ 	 	  background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+  		color: #f1f1f1;
+  		margin-top: 100px;
+  		margin-bottom: 100px;
+}
+
+/*Styling chooose file button*/
+.text-block input[type="file"]{
+	display: none;
+}
+.custom-upload{
+	margin-top: 10px;
+	border:1px solid #666;
+	color: #fff;
+	padding: 20px 50px 20px 50px;
+	background: black;
+	box-shadow: 1px 1px 1px #ddd;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+
+
+/*for collapse board*/
+.panel-group .container-fluid{
+	text-align: center;
+	background-color: floralwhite;
+}
+
+.panel-group .container-fluid p{
+	margin-top: 10px;
+}
+
+.panel-group .container-fluid h6{
+	margin-top: 10px;
+}
+
+.panel-group .row .col-sm-3{
+	float: left;
+  padding: 10px;
+	/*margin: 0px 2px 0px 2px;*/
+
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+  	width: 40%;
+    position: relative;
+}
+
+.panel-group .row .col-sm-3.no-hov:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.panel-group .card{
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+	border-radius: 0px;
+	margin: 0px 10px 0px 10px;
+}
+
+
+.panel-group .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+}
+
+.panel-group .card img{
+	height: 300px;
+}
+
+.panel-group .card-body{
+	 color: white;
+	 bottom: 0;
+	 background-color: #7B7D7D ;
+	 /*position: absolute;*/
+	 /*background: rgb(0, 0, 0); /* Fallback color */
+ 	 /*background: rgba(0, 0, 0, 0.8);  Black background with 0.5 opacity */
+}
+
+.panel-group .card-body h1{
+	color:#17202A  ;
+}
+
+
+/*For collapsible*/
+#accordion{
+	transition: 10s;
+}
+
+
+/*For navbar*/
+/*.collapse:not(.show) {
+     display: block; 
+}*/
+
+@media screen and (max-width: 300px) {
+    .button-text {
+        display: none;
+    }
+}
+
+
+/*FOR INPUT SPINNER*/
+.spinner .row{
+  display: -webkit-inline-box;
+  padding: 40px;
+}
+
+.spinner .container-fluid{
+  text-align: center;
+  color: white;
+  background-color: #2E4053 ;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.spinner .input-group.number-spinner{
+  margin-top: 30px;
+ }
+
+.spinner .form-control.text-center{
+  color: white;
+  background: #1bc138;
+  border-radius: 10px;
+  /*border-color: #1bc138;*/
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.spinner .btn.btn-primary{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  letter-spacing: 0.05em;
+  transition: all 0.1s ease-in;
+  background: #1bc138;
+  /*border-color: #1bc138;*/
+  border-color: white;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+.spinner .btn.btn-primary:hover{
+  transform: scale(1.03);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+}
+
+/*FOR TOGGLABLE SIDEPANEL*/
+.sidepanel  {
+  padding-top: 55px;
+  position: fixed;
+  right: 0;
+  top:195px;
+  width: 250px;
+  /*margin-right: 10px;*/
+  /*height: calc(100vh - 70px);*/
+  height: 55vh;
+  /*background-color: #839192; different color on closing*/
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+  border-style: solid;
+  background-color : rgba(0,0,0,0.7);
+  border-radius: 10px;
+  /*justify-content: center;*/
+}
+
+/*To style the line*/
+.line{
+  border: 0;
+  border-top: 1px solid white;
+  margin: 10px;
+}
+
+.sidepanel .bo {
+  padding: 15px 10px 15px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  transition: 0.3s;
+  /*color: #F4D03F ;*/
+  color: white;
+  margin-bottom: 10px;
+}
+
+.sidepanel .bo:hover {
+  border: 2px solid white;
+  color: #f1f1f1;
+}
+
+/*For border*/
+.bo{
+  background-color: #606060;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+/* For speedy delivery */
+.speedy{
+  padding: 15px 10px 15px 20px;
+  color: white;
+}
+.speedy a:link {
+  background-color:#17202A;
+}
+
+.speedy a:hover {
+  background-color: #17202A;
+  cursor: pointer;
+}
+
+.speedy a:active {
+  background-color: hotpink;
+} 
+
+/* For popover */
+.popover{
+  left: 0;
+  width: 200px;
+}
+
+.popover-body {
+  /* left: 0; */
+  width: 200px;
+}
+
+.popover{
+  padding: 10px;
+  text-align: center;
+  background-color:white;
+}
+
+/*Total in side panel*/
+.total{
+ width: -webkit-fill-available;
+ color: white;
+ border-radius: 10px;
+ text-align: left;
+ /*background-color: #85929E;*/
+ background-color: black;
+ border: 2px solid white; 
+ text-decoration: none;
+ font-size: 20px;
+ padding: 10px;
+ margin-left: 5px;
+ margin-right: 5px;
+ position: absolute;
+ bottom: 90px;
+}
+
+.right-align{
+  float: right;
+}
+
+.left-align{
+  float: left;
+}
+
+.clear{
+  clear: both;
+}
+
+.checkout{
+ width: -webkit-fill-available;
+ text-align: center;
+ color: white;
+ border-radius: 10px;
+ background-color: #85929E;
+ border: 2px solid white; 
+ text-decoration: none;
+ font-size: 20px;
+ padding: 10px;
+ margin-left: 5px;
+ margin-right: 5px;
+ margin-top: 10px;
+ position: absolute;
+ bottom: 20px;
+}
+
+/*.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}*/
+
+.nav-view{
+  transform: translateX(0);
+  background-color : rgba(0,0,0,0.7);
+  border-radius: 10px;
+}
+
+.openbtn {
+  top:70px;
+  position: fixed;
+  margin-right: 50px;
+  right: 0;
+  display: inline-flex;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: solid;
+  border-radius: 15px;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+
+
+/*For date picker*/
+/*.time{
+  margin-bottom: 300px;
+}
+
+.time .container-fluid{
+  color: white;
+}
+
+.time .col-sm-4{
+  padding: 5%;
+}
+
+.time .col-sm-8{
+  padding: 5%;
+}
+
+.time .carousel{
+  text-align: center;
+}
+
+.time .carousel-inner{
+  color: white;
+}
+
+.time .carousel-item .card{
+  background-color: #95A5A6;
+}*/
+/*.time .carousel-item{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}*/
+
+
+/*For deadline*/
+.time{
+  margin-bottom: 300px;
+}
+
+.time .container-fluid{
+  text-align: center;
+}
+.time .col-sm-4{
+  padding: 5%;
+  color: white;
+  font-family: Ringside Regular A,Ringside Regular B,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
+}
+
+.time .col-sm-8 .row.align-items-center{
+  padding: 5%;
+}
+
+.time .row.align-items-end{
+  color: #ECF0F1 ;
+  padding: 20px;
+}
+
+.time input[type="text"]{
+  width: 90px;
+}
+
+.time .controls-top{
+  padding-bottom: 10px;
+}
+
+.time #in{
+  border: 1px solid #6c757d;
+  padding: 12px 22px 12px 22px;
+}
+
+.time .fa-chevron-right:before {
+    content: "\f054";
+    margin-left: 3px;
+}
+
+.time .card{
+  background-color: #201c29 ;
+  border: 1px solid #312d3c;
+ color: #a1a1af;
+}
+
+.time .card-header {
+    border-bottom: 1px solid #312d3c;
+}
+
+

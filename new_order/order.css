@@ -1,0 +1,556 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #444;
+    --overlay-color: rgba(0, 0, 0, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+.full{
+  padding: 5% !important;
+  object-fit: cover;
+  width: fit-content;
+ /* Recent comment */
+  
+  /* width: 100%;  */
+  /* height: 100vh; */
+  /* margin-right: auto;
+  margin-left: auto; */
+  /* left:50%;
+  top:50%;*/
+  background-position:bottom 10px right 10px;
+  /* background-size: contain; */
+  /* bottom 10px left 10px; */
+  
+  /* transform: translate(-20%,-50%); */
+  background-size: 55vh;
+  background-repeat: no-repeat;
+  background-image: url(corner_bottom.png);
+}
+
+body {
+    /* font-family: Roboto; */
+    line-height: 1.6;
+    color: #333;
+    font-size: 1.1rem;
+}
+/* For navbar */
+.navbar{
+    /* height: 95px; */
+    background-color: #0051BF;
+    /* padding: 40px; */
+}
+
+.navbar .navbar-brand{
+    text-align: center;
+    color: white;
+    margin: 0px;
+}
+
+.navbar .navbar-brand:hover{
+    color: white;
+}
+
+.navbar-nav a.nav-link{
+    color: white;
+}
+
+.navbar-nav{
+    background-color:#0051BF ;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+.custom-toggler.navbar-toggler {
+    border-color: white;
+  } 
+
+#navbarResponsive{
+    /* background-color: black; */
+}
+/* end */
+
+
+/* animations in navbar*/
+/* Keyframes */
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+
+/* stroke */
+nav.fill ul li a {
+  position: relative;
+}
+
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+@-webkit-keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      /* background: #333; */
+      background: #FF9F22;
+      border-radius: 30px;
+    }
+  }
+/* end */
+
+/* Go to home button */
+.row{
+    text-align: center;
+    display: contents; 
+    color: #707070;
+}
+
+a.btn.btn-lg{
+    padding-right: 5px;
+    margin-right: 2px;
+    font-size: x-large;
+    color: #707070;
+}
+
+/* Select profesion */
+.row h3{
+    color: #353535;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.vl{
+    border-left: 3px solid  #0051BF;
+    height: 65px;
+}
+
+
+button {
+  outline: none;
+}
+
+/* .flex-row{
+  top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    position: absolute;
+} */
+
+
+.profession .btn{
+    padding: 10px;
+    color:#C5C1C1;
+    font-size: x-large;
+    border-radius: 0px;
+    border-bottom: 6px solid grey;
+    margin-bottom: 100px;
+}
+
+a.btn.button-school.active{
+    border: 6px solid #0051BF ;
+    border-top: 0px;
+    border-right:0px;
+    border-left: 0px;
+    color:#0051BF ;
+  }
+
+
+
+
+.card{
+box-shadow: 0px 3px 6px #00000029;
+border-color: #0051BF;
+text-align: center;
+border-radius: 28px;
+/* height: 500px;
+width: 240px; */
+}
+
+.card .overlay {
+  position: absolute;
+  background: #0051BF;
+  top: -10%;
+  left: -0.5rem;
+  width: calc(100% + 1rem);
+  padding: 1rem 0;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.card .overlay i {
+  font-size: 2rem;
+}
+
+.card .overlay p {
+  margin: 0;
+  color: white;
+}
+
+.card .card_img{
+  height: 65px;
+  width: 65px;
+}
+
+.card .card-body{
+  padding-top: 3rem;
+    
+}
+/* list styling */
+li{
+  list-style-type: none;  
+}
+
+li::before{
+  content: "<i class="fa fa-check" aria-hidden="true"></i>";
+}
+/* For plus button */
+.plus{
+  background-color: #FF9F22;
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+  padding: 20px;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  /* margin-top: 30px; */
+}
+
+/* YOur cart btn */
+.cart-btn{
+    font-size: xx-large;
+    padding: 10px;
+    border-radius: 44px;
+    background-color: #FF9F22;
+    border-color:#FF9F22 ;
+    /* color: white; */
+}
+
+.button{
+  color: white;
+}
+/* To animate the button */
+/* .cart-btn::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        border-radius: 10rem;
+        z-index: -2;
+}
+
+.cart-btn::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($red, 15%);
+        transition: all .3s;
+        border-radius: 10rem;
+        z-index: -1;
+}
+
+.cart-btn:hover{
+  color: #fff;
+  
+}
+
+.cart-btn:hover::before {
+  width: 100%;
+} */
+
+/*FOR INPUT SPINNER*/
+.spinner .row{
+  display: -webkit-inline-box;
+  padding: 40px;
+}
+
+.spinner .container-fluid{
+  text-align: center;
+  color: white;
+  background-color: #2E4053 ;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.spinner .input-group.number-spinner{
+  margin-top: 30px;
+ }
+
+.spinner .form-control.text-center{
+  color: white;
+  background: #1bc138;
+  border-radius: 10px;
+  /*border-color: #1bc138;*/
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.spinner .btn.btn-primary{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  letter-spacing: 0.05em;
+  transition: all 0.1s ease-in;
+  background: #1bc138;
+  /*border-color: #1bc138;*/
+  border-color: white;
+  margin-right: 1px;
+  margin-left: 1px;
+  height: 39px;
+}
+
+.spinner .btn.btn-primary:hover{
+  transform: scale(1.03);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+}
+
+/* for add button */
+.add1{
+  /* display: inline-block;
+  width: 220px;
+  height: 60px;
+  border:2px solid #FF9F22;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  line-height: 56px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  background-color: transparent;
+  outline: none;
+  transition: all ease 0.5s;
+  right:0; */
+  /* display: inline-block;
+  border:2px solid #FF9F22;
+  box-sizing: border-box;
+  transition: all ease 0.5s;
+  background-color: transparent;
+  outline: none; */
+
+  background-color: #FF9F22;
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+  padding: 20px;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  border-color: blue;
+  outline: none;
+  /* color: white; */
+}
+
+.add1.active{
+  /* font-size: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  outline: none;
+  border-left-color:transparent;
+  animation: rotate 1.4s ease 0.5s infinite; */
+
+  /* background-color: #FF9F22; */
+  /* border-color: #FF9F22; */
+  border-color: blue;
+  background-color: transparent;
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+  padding: 20px;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+
+  outline: none;
+  border-radius: 50%;
+  border-left-color:transparent;
+  animation: rotate 1.4s ease 0.5s infinite;
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(360deg);
+  }
+}
+
+.add1.active.success{
+  position: relative;
+  background-color: #FF9F22;
+  animation: bounce .3s ease-in;
+  border-color: blue;
+}
+
+@keyframes bounce{
+  0%{
+    transform: scale(0.9);
+  }
+}
+
+.success::before{
+  content: '';
+  position: absolute;
+  background-image: url(check.svg);
+  background-size: cover;
+  background-color: #FF9F22;
+  left: 0;
+  right: 0;
+  margin:  0 auto;
+  width: 50px;
+  height: 50px;
+  line-height: 31px;
+  top: 12px;
+  /* background-color: #FF9F22; */
+  /* background-color: #0051BF; */
+}
+/* ENd add button */
+
+
+/* sticky btn */
+.eg {
+  z-index: 1000;
+  top:160px;
+  position: fixed;
+  right: 0px;
+  display: inline-flex;
+  font-size: 3vh;
+  cursor: pointer;
+  background-color: #FF9F22;
+  color: white !important;
+  padding: 13px 15px;
+  border: none;
+  border-top-left-radius: 58px;
+  border-bottom-left-radius: 58px;
+  /* width: 260px; */
+  /* width: 25%; */
+  /* padding-right: 57px; */
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 535px) {
+  .vl{
+    /* height: 102px; */
+  }
+}
+
+/* @media (min-width: 1600px){
+  .flex-row .card{
+  width: 230px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+}
+
+@media (max-width:1600px)
+{
+  .flex-row .card{
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+} */
+
+@media (max-width:430px)
+{
+  .container-fluid.full{
+    padding: 6vh !important;
+  }
+}
+
+@media (min-width: 2560px){
+  .eg{
+    padding-right: 57px;
+    border-top-left-radius: 110px;
+    border-bottom-left-radius: 110px;
+    width: 17%;
+  }
+}
+
+@media (min-width: 2560px){
+  .full{
+    height: 93vh;
+    width: unset;
+  }
+}
+
+@media (max-width: 570px){
+  .eg{
+    padding: 0px;
+    top: 18vh;
+    padding-left: 15px;
+  }
+}
+
+/* try for mobile only */
+@media (max-width: 767px) { 
+  .card .overlay{
+    position: relative ;
+  }
+}
